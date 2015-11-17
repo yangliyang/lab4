@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>serch</title>
+</head>   
+<body align="center" background="http://www.1tong.com/uploads/wallpaper/distinct/314-2-1280x800.jpg">
+	<h1 align="center">图书管理系统</h1>
+	<hr><br>
+	{% if l %}
+	<p><h2>{{name}}的书籍：<h2></p><br>
+	{% for i in l%}
+	
+	<p><a href="info/{{i.ISBN}}/"><h3>{{i.Title}}</h3></a></p>
+	{% endfor %}
+	{% else %}
+	<p><b>书库中无该作者!</b></p>
+	{% endif %}
+	
+
+	
+
+</body>
+</html>

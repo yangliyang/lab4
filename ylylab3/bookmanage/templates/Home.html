@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>BOOK</title>
+</head>  
+<body align="center" background="http://www.1tong.com/uploads/wallpaper/distinct/314-2-1280x800.jpg">
+
+	<h1 align="center">图书管理系统</h1>
+	<hr><br>
+	<form 
+	action="serch" method="get">
+	请输入作者姓名：
+	<input type="text" name="name">
+	<input type="submit" value="搜索">
+	<br><br>
+	</form
+	action="addbook" method="get">
+	点击按钮添加图书
+	<input type="button" onclick="window.location.href=('addbook')" value="添加图书">
+	</form>
+	<br><br>
+	<table align="center">
+	{% for i in page %}
+	<tr>
+	<td><b><a href="info/{{i.ISBN}}/">{{i.Title}}</b></a></td>
+	<td>作者：<b>{{i.author_name}}</b></td>
+	<td>出版商：<b>{{i.Publisher}}</b></td>
+	<td>价格：<b><font color="yellow"> ￥{{i.Price}}</font></b></td>
+	<td  align="center"><form
+	action="delete" method="get">
+	<input type="button" onclick="window.location.href=('delete{{i.ISBN}}')" value="删除"style="width: 50px; height: 50px;">
+	</form></td>
+	<td align="center"><form
+	action="changebook" method="get">
+	<input type="button" onclick="window.location.href=('changebook{{i.ISBN}}')" value="更新"style="width: 50px; height: 50px;">
+	</form></td>
+	</tr>
+	{% endfor %}
+	</table>
+
+</body>
+</html>
