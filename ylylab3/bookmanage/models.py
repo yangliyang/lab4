@@ -1,6 +1,11 @@
 from django.db import models
+<<<<<<< HEAD
 
 
+=======
+#
+# Create your models here.
+>>>>>>> C4
 class Book(models.Model):
 	ISBN=models.CharField(max_length=10)
 	Title=models.CharField(max_length=10)

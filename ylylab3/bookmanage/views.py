@@ -1,7 +1,11 @@
 ﻿from django.shortcuts import render
 from bookmanage.models import Book , Author
 # Create your views here.
+<<<<<<< HEAD
 def play(book):
+=======
+def play(books):
+>>>>>>> C4
 	book_list = []
 	for book in books:
 		author = Author.objects.get(AuthorID=book.AuthorID)
