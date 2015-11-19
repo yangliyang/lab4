@@ -1,6 +1,7 @@
 ﻿from django.shortcuts import render
 from bookmanage.models import Book , Author
 # Create your views here.
+del
 def play(books):
 	book_list = []
 	for book in books:
