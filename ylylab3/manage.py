@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import os
-
+import python
 
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "lab3.settings")
